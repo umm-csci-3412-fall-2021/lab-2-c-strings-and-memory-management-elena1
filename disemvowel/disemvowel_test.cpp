@@ -16,7 +16,7 @@ char* result = disemvowel((char*) "pqrst");
 
 TEST(Disemvowel, HandleOnlyVowels) {
 char* result = disemvowel((char*) "aeiouAEIOUOIEAuoiea");
-  ASSERT_STREQ("", result));
+  ASSERT_STREQ("", result);
   free(result);
 }
 TEST(Disemvowel, HandleMorrisMinnesota) {
