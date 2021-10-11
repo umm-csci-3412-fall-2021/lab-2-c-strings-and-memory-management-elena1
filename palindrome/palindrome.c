@@ -31,6 +31,7 @@ char *palindrome(char const *str) {
       result = false;
     }
     ++i;
+    }
 
   if (result) {
     answer = (char*) calloc(4, sizeof(char));
