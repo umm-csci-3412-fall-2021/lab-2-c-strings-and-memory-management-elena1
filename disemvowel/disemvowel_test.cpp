@@ -15,11 +15,10 @@ char* result = disemvowel((char*) "pqrst");
 }
 
 TEST(Disemvowel, HandleOnlyVowels) {
-char* result = disemvowel((char*) "aeiouAEIOUOIEAuoiea";
+char* result = disemvowel((char*) "aeiouAEIOUOIEAuoiea");
   ASSERT_STREQ("", result));
   free(result);
 }
-
 TEST(Disemvowel, HandleMorrisMinnesota) {
 char* result = disemvowel((char*) "Morris, Minnesota");
   ASSERT_STREQ("Mrrs, Mnnst", result);
@@ -46,9 +45,11 @@ TEST(Disemvowel, HandleLongString) {
     str[i] = 'a';
   }
   str[size-1] = '\0';
-  
-  ASSERT_STREQ("xyz", disemvowel(str));
 
+  char* result = disemvowel(str);
+  ASSERT_STREQ("xyz", result);
+
+  free(result);
   free(str);
 }
 
